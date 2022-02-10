@@ -33,7 +33,10 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: white;
-  padding: 0 10px 5px 10px;
+  padding:0;
+}
+#name {
+  padding: 0 10px;
 }
 #contact {
   display: flex;
@@ -62,10 +65,12 @@ main {
 #status {
   margin-left: auto;
   padding: 7px;
+  color: darkgray;
 }
 img {
   border-radius: 50%;
   border: 3px solid #42a936bc;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width:600px) {
@@ -80,6 +85,7 @@ img {
     "img occupation"
     "img brand"
     "contact offer";
+    
   }
   #status {
     grid-area: status;
@@ -88,29 +94,46 @@ img {
   }
   #name {
     grid-area: name;
-    padding: 25px;
-    margin:0%;
+    margin-top: auto;
+    padding: 10px 0 0 0;
   }
   #img {
     grid-area: img;
-    grid-row: span 2;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
   }
   #occupation {
     grid-area: occupation;
+    font-size: 1.5rem;
   }
   #brand {
     grid-area: brand;
     display: flex;
-    border-left: 2px solid green;
-    padding: 25px;
+    font-size: 1.2rem;
+    color: gray;
   }
+  #brand > p {
+    border-left: 2px solid green;
+    padding: 0 20px 0 8px;
+    font-size: 1.4rem;
+  } 
   #contact {
     grid-area: contact;
     width: 100%;
-    margin-right: auto;
+    height: 75%;
+    margin-top: auto;
   }
   #offer {
     grid-area: offer;
+    font-size: 1.2rem;
+  }
+  #name, #occupation, #brand, #offer {
+    /* border: 1px solid red; */
+    background-color: lightgray;
+    height: 100%;
+    text-align: left;
+    padding: 10px 0 0 15px;
   }
 
 }
